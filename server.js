@@ -22,6 +22,6 @@ createViteHandle({
     })
 
     app.listen(port, () => {
-        console.log(`StartAt: http://localhost:${port}`)
+        console.log(`http://localhost:${port}`)
     })
 })

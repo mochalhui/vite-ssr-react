@@ -1,6 +1,5 @@
 // @ts-check
 const fs = require('fs')
-const { IncomingMessage } = require('http')
 const path = require('path')
 const isTest = process.env.NODE_ENV === 'test' || !!process.env.VITE_TEST_BUILD
 const { Helmet } = require('react-helmet')
@@ -16,9 +15,7 @@ async function createViteHandle({
   index,
   dist,
 }) {
-  /**
-   * @type {import('vite').ViteDevServer}
-   */
+
   let vite = null
   let staticServe = null
   const indexHTML = fs.readFileSync(index, 'utf-8')
@@ -58,14 +55,6 @@ async function createViteHandle({
     }
   }
 }
-
-/**
- *
- * @param {IncomingMessage} req
- * @param {*} res
- * @param {{template: any; dev: boolean; vite: import('vite').ViteDevServer;dist: string}} param2
- * @returns
- */
 
 async function handleRender(req, res, { template, dev, vite, dist }) {
   try {
