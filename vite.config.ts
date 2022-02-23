@@ -15,8 +15,5 @@ export default ({ mode }) => {
     esbuild: {
       jsxInject: `import React from 'react';`,
     },
-    define: {
-      __DEV__: process.env.NODE_ENV !== 'production',
-    },
   })
 }

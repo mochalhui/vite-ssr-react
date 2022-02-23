@@ -6,7 +6,6 @@ declare global {
     [K: string]: any
   }
 
-  export const __DEV__: boolean
   export type KV = Record<string, any>
   export type SSRPage<P = unknown> = {
     loadData?: (ctx: {
@@ -24,4 +23,4 @@ declare global {
   >
 }
 
-export {}
+export { }

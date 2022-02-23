@@ -16,7 +16,6 @@ async function loadData(url, context) {
         })
       : null
   })
-
   try {
     const arr = await Promise.all(promises)
     const dict = {} as Record<string, { url: string; data: any }>
